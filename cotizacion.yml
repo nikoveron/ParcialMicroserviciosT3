@@ -1,0 +1,10 @@
+version: '3'
+services:
+  server:
+    image: cotizacion
+    deploy:
+      replicas: 7
+    ports:
+      - "3000:80"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
